@@ -1,69 +1,114 @@
-# React + TypeScript + Vite
+# 🐾 Nopaath Pets — Bio Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el sitio **bio** oficial de nuestra tienda **Nopaath Pets**, un pequeño y simpático sitio hecho con [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [TailwindCSS](https://tailwindcss.com/) y [shadcn/ui](https://ui.shadcn.com/).
 
-Currently, two official plugins are available:
+🔗 **Enlace en producción**: [https://bio.nopaathpets.com](https://bio.nopaathpets.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Características
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Diseño limpio y adaptable con Tailwind y shadcn/ui.
+- Fetch dinámico de los **últimos 9 posts de Instagram** desde un microservicio.
+- Sección de descripción de la tienda + beneficios clave.
+- Completamente funcional aún sin conexión al microservicio (fallback de error para los posts).
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ⚙️ Tecnologías
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- ⚡️ Vite
+- 🟦 TypeScript
+- 🎨 TailwindCSS
+- 🧩 shadcn/ui
+- 🔁 Axios (para consumir el microservicio)
+
+---
+
+## 🚀 Instalación local
+
+Clona el proyecto:
+
+```bash
+git clone git@github.com:Nopaath-Pets/bio.git
+cd bio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Instala las dependencias con el gestor de tu preferencia:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install       # o pnpm install / yarn install
 ```
+
+Crea un archivo `.env` en la raíz con la siguiente variable:
+
+```env
+VITE_API_URL=https://tudominio.com/api
+```
+
+Ejecuta el proyecto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+├── index.html
+├── package.json
+├── vite.config.ts
+├── public/
+│   ├── favicon-dark.svg
+│   ├── favicon-light.svg
+│   └── vite.svg
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── config/
+│   │   └── environment.ts
+│   ├── hooks/
+│   │   └── usePosts.ts
+│   ├── components/
+│   │   ├── instagram/
+│   │   ├── icons/
+│   │   ├── logos/
+│   │   ├── ui/
+│   │   └── *.tsx (otras secciones como perfil, links, size chart, etc.)
+│   ├── assets/
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── types/
+│   │   └── post.ts
+│   └── styles: App.css, index.css
+├── tsconfig*.json
+└── README.md
+```
+
+---
+
+## ❓ ¿Qué pasa si el microservicio de Instagram falla?
+
+El sitio se renderiza normalmente, solo la sección de Instagram mostrará un mensaje de error si no logra obtener los datos.
+
+---
+
+## 🧪 Preview
+
+Puedes verlo en vivo en: [https://bio.nopaathpets.com](https://bio.nopaathpets.com)
+
+---
+
+## 📖 Código abierto
+
+Este proyecto es público para que cualquier persona pueda aprender cómo se integró una sección dinámica de Instagram con un frontend moderno. **No tiene licencia**, por lo que puedes clonar y explorar sin restricciones, pero por favor no lo uses directamente con fines comerciales sin consentimiento.
+
+---
+
+## 💬 Contacto
+
+Si quieres saber más sobre el proyecto o colaborar, puedes contactarnos desde la tienda o a través de Instagram: [@nopaath.pets](https://www.instagram.com/nopaath.pets)
+
+---
