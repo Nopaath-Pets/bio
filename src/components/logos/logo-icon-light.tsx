@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogoIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+const LogoIconLight = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			viewBox="0 0 400 332"
@@ -169,4 +169,4 @@ const LogoIconDark = (props: React.SVGProps<SVGSVGElement>) => {
 	);
 };
 
-export default LogoIconDark;
+export default LogoIconLight;

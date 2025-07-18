@@ -1,5 +1,5 @@
 export const logoComponents = {
-	"icon-dark": () => import("./logo-icon-dark"),
+	"icon-light": () => import("./logo-icon-light"),
 };
 
 export type LogoName = keyof typeof logoComponents;
