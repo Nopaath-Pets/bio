@@ -7,7 +7,7 @@ const ProfileSection = () => {
 			<div className="relative w-32 h-32 mx-auto flex items-center justify-center">
 				<div className="absolute inset-0 bg-gradient-to-r from-[#F77F00] to-[#FFE27A] rounded-full blur-lg opacity-30 animate-pulse" />
 				<div className="relative w-full h-full object-cover rounded-full border-4 border-bg-border dark:border-gray-800 shadow-xl flex items-center justify-center">
-					<Logo name="icon-dark" className="w-22 h-22" />
+					<Logo name="icon-light" className="w-22 h-22" />
 				</div>
 			</div>
 			<h1 className="font-fredoka text-4xl font-bold text-center flex items-center justify-center gap-2">
