@@ -44,9 +44,7 @@ export const PostGrid: React.FC<PostGridProps> = ({ posts, isLoading = false, er
 				<Icon name="danger-circle" className="w-8 h-8 text-red-600" strokeWidth={3} />
 			</div>
 			<h3 className="text-lg font-semibold text-gray-900 mb-2">No se pudieron cargar los posts</h3>
-			<p className="text-gray-600 mb-4 max-w-md">
-				{error || "Algo salió mal mientras cargabamos los posts de Instagram. Por favor, inténtalo de nuevo."}
-			</p>
+			<p className="text-gray-600 mb-4 max-w-md">Por favor, inténtalo de nuevo.</p>
 			{onRetry && (
 				<Button onClick={onRetry} variant={"secondary"}>
 					<Icon name="refresh" className="w-4 h-4 mr-2" />
@@ -62,9 +60,9 @@ export const PostGrid: React.FC<PostGridProps> = ({ posts, isLoading = false, er
 			<div className="mb-4 p-3 bg-gray-100 rounded-full">
 				<div className="w-8 h-8 bg-gray-400 rounded"></div>
 			</div>
-			<h3 className="text-lg font-semibold text-gray-900 mb-2">No posts found</h3>
+			<h3 className="text-lg font-semibold text-gray-900 mb-2">No se encontraron posts</h3>
 			<p className="text-gray-600 max-w-md">
-				There are no posts to display at the moment. Check back later for new content.
+				No hay posts para mostrar en este momento. Vuelve a comprobar más tarde para nuevos contenidos.
 			</p>
 		</div>
 	);

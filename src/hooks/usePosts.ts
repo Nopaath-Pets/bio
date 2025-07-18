@@ -15,7 +15,6 @@ export const usePosts = () => {
 			const { data } = await axios.get<IPost[]>(`${environment.API_URL}/posts`);
 			setPosts(data);
 		} catch (error) {
-			console.log("Error fetching posts:", error);
 			setError(error instanceof Error ? error.message : "An unknown error occurred");
 		} finally {
 			setIsLoading(false);
