@@ -12,7 +12,7 @@ export const usePosts = () => {
 		setIsLoading(true);
 		setError(null);
 		try {
-			const { data } = await axios.get<IPost[]>(`${environment.API_URL}/posts`);
+			const { data } = await axios.get<IPost[]>(`${environment.API_URL}/instagram/posts`);
 			setPosts(data);
 		} catch (error) {
 			setError(error instanceof Error ? error.message : "An unknown error occurred");
